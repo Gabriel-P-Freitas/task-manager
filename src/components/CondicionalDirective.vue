@@ -3,6 +3,7 @@ export default {
   data() {
     return {
       msg: `Seja bem vindo:`,
+      name: "Fernando",
       showHeader: true,
       acessLevel: "Marketing",
     };
@@ -13,13 +14,13 @@ export default {
 <template>
   <header v-show="showHeader" class="header">
     <h1 v-if="acessLevel === 'Admin'">
-      {{ msg }} <span>{{ acessLevel }}</span>
+      {{ msg }} <span class="span-name">{{ acessLevel }} {{ name }}</span>
     </h1>
-    <h1 v-if="acessLevel === 'Marketing'">
-      {{ msg }} <span>{{ acessLevel }}</span>
+    <h1 v-else-if="acessLevel === 'Marketing'">
+      {{ msg }} <span class="span-name">{{ acessLevel }} {{ name }}</span>
     </h1>
-    <h1 v-if="acessLevel === 'User'">
-      {{ msg }} <span>{{ acessLevel }}</span>
+    <h1 v-else="">
+      {{ msg }} <span class="span-name">{{ acessLevel }} {{ name }}</span>
     </h1>
 
     <nav>
@@ -42,6 +43,10 @@ export default {
 }
 .header h1 {
   color: white;
+}
+
+.header .span-name {
+  background-color: rgba(255, 255, 6, 0.626);
 }
 
 .header nav ul {

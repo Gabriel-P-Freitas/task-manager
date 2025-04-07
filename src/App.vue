@@ -1,19 +1,19 @@
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
-import TheHeader from "./components/TheHeader.vue";
+import Condicional from "./components/CondicionalDirective.vue";
+import Loops from "./components/LoopsDirective.vue";
+import Bind from "./components/BindDirective.vue";
 export default {
   components: {
-    TheHeader, // Registro
+    Condicional, // Registro
+    Loops, // Registro
+    Bind, // Registro
   },
 };
 </script>
 
 <template>
-  <TheHeader />
+  <Bind />
 </template>
 
-<style>
-header {
-  line-height: 1.5;
-}
-</style>
+<style></style>
